@@ -38,10 +38,7 @@ while umoeder == '':
             program3 = "flak"
     while program3 == "flak":
         nentemp = apgiotboard.tempsensor()
-        if nentemp >= 25.8:
-            for templedde in range(0,apgiotboard.MAXLED+1):
-                apgiotboard.led(templedde).on()
-        else:
-            apgiotboard.all_leds_off()
+        ambtemp = round(apgiotboard.potentiometer(16)+19)
+        print(ambtemp)
         print(nentemp)
         sleep(0.05)
