@@ -16,7 +16,7 @@ while umoeder == '':
             Pin(13, Pin.OUT).off()
             apgiotboard.led(1).off()
         sleep(0.01)
-        if apgiotboard.button_pressed(1):
+        if apgiotboard.button_pressed(1,True):
             program1 = "VOLGENDES"
             program2 = "flak"
     while program2 == "flak":
@@ -28,17 +28,13 @@ while umoeder == '':
         if vorigekneker != kneker:
             vorigekneker = kneker
             apgiotboard.all_leds_off()
-        Pin(posipinne, Pin.OUT).on()
+        Pin(posipinne, Pin.OUT).off()
         if vorigeposipinne != posipinne:
             vorigeposipinne = posipinne
             for crack in range(14,22):
-                Pin(crack, Pin.OUT).off()
-        sleep(0.0000001)
-        if apgiotboard.button_pressed(1):
+                Pin(crack, Pin.OUT).on()
+        if apgiotboard.button_pressed(1,True):
             program2 = "VOLGENDES"
             program3 = "flak"
-    while program3 =: "flak":
-            
-
-        
-    
+    while program3 == "flak":
+        apgiotboard.all_leds_off()
