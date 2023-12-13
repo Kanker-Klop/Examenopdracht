@@ -20,6 +20,8 @@ while umoeder == '':
             program1 = "VOLGENDES"
             program2 = "flak"
     while program2 == "flak":
+        posipinne = apgiotboard.potentiometer(high = in range (13,22))
+        posiledde = apgiotboard.potentiometer(apgiotboard.MAXLED)
 
         
     
