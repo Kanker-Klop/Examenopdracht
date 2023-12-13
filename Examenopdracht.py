@@ -37,4 +37,9 @@ while umoeder == '':
             program2 = "VOLGENDES"
             program3 = "flak"
     while program3 == "flak":
-        apgiotboard.all_leds_off()
+        nentemp = apgiotboard.tempsensor()
+        if nentemp => 26.8:
+            for templedde in range(0,Maxled+1):
+                apgiotboard.led(templedde).on()
+        else:
+            apgiotboard.all_leds_off()
