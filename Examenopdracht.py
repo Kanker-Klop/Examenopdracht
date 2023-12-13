@@ -39,6 +39,14 @@ while umoeder == '':
     while program3 == "flak":
         nentemp = apgiotboard.tempsensor()
         ambtemp = round(apgiotboard.potentiometer(16)+19)
-        print(ambtemp)
-        print(nentemp)
-        sleep(0.05)
+        if nentemp > ambtemp:
+            leddenhoogte = (nentemp % ambtemp)
+            for temphoogte in range(1,leddenhoogte+1):
+                apgiotboard.led(temphoogte).on()
+            sleep(0.00001)
+            apgiotboard.all_leds_off()
+        sleep(0.000001)
+        if apgiotboard.button_pressed(1,True):
+            program3 = "VOLGENDES"
+            program4 = "flak"
+    while program4 == "flak"
