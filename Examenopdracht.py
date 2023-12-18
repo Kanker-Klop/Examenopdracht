@@ -78,9 +78,10 @@ while umoeder == '':
                 program4 = "VOLGENDES"
                 program5 = "flak"
                 apgiotboard.all_leds_off()
-                break        
-
-            
-            
-                
-            
+                break
+    while program5 == "flak":
+        def willekeurige_meneeren():
+                kaka1 = 2+random.randint(0,4)
+                kaka2 = 5+random.randint(0,1)
+                kakpis = (kaka1 == kaka2)
+                return kakpis
