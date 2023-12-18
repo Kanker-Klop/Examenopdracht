@@ -48,4 +48,12 @@ while umoeder == '':
         sleep(0.000001)
         if apgiotboard.button_pressed(1,True):
             program3 = "VOLGENDES"
-            program1 = "flak"
+            program4 = "flak"
+    while program4 == "flak":
+
+            
+
+            
+            
+                
+            
