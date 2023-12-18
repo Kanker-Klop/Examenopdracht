@@ -85,3 +85,18 @@ while umoeder == '':
                 kaka2 = 5+random.randint(0,1)
                 kakpis = (kaka1 == kaka2)
                 return kakpis
+        apgiotboard.all_leds_off()
+        if apgiotboard.button_pressed(0):
+            kakaids = willekeurige_meneeren()
+            print(kakaids)
+            if kakaids:
+                for doodgaan in range(1,13):
+                    for DOOD in range(1, apgiotboard.MAXLED+1):
+                        apgiotboard.led(DOOD).on()
+                    sleep(0.1)
+                    for DOODuit in range(1, apgiotboard.MAXLED+1):
+                        apgiotboard.led(DOODuit).off()
+                    sleep(0.1)
+            else:
+                apgiotboard.led(2).on()
+                sleep(1)
