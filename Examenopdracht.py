@@ -64,6 +64,16 @@ while umoeder == '':
                 for kakaidskak in range(1,apgiotboard.MAXLED+1):
                     apgiotboard.led(kakaidskak).on()
                     sleep(0.2)
+
+            else:
+                apgiotboard.led(aids).on()
+                apgiotboard.led(aids2).on()
+                apgiotboard.led(aids3).on()
+            vorigeaids = aids
+            vorigeaids2 = aids2
+            vorigeaids3 = aids3
+            tijdgat = apgiotboard.potentiometer(0.8) 
+            sleep(tijdgat)
             
 
             
