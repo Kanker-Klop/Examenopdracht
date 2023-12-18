@@ -74,7 +74,11 @@ while umoeder == '':
             vorigeaids3 = aids3
             tijdgat = apgiotboard.potentiometer(0.8) 
             sleep(tijdgat)
-            
+            if apgiotboard.button_pressed(1,True):
+                program4 = "VOLGENDES"
+                program5 = "flak"
+                apgiotboard.all_leds_off()
+                break        
 
             
             
