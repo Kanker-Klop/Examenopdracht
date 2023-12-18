@@ -50,7 +50,20 @@ while umoeder == '':
             program3 = "VOLGENDES"
             program4 = "flak"
     while program4 == "flak":
-
+        vorigeaids = 0
+        vorigeaids2 = 0
+        vorigeaids3 = 0
+        while True:
+            apgiotboard.led(vorigeaids).off()
+            apgiotboard.led(vorigeaids2).off()
+            apgiotboard.led(vorigeaids3).off()
+            aids = random.randint(1,apgiotboard.MAXLED)
+            aids2 = random.randint(1,apgiotboard.MAXLED)
+            aids3 = random.randint(1,apgiotboard.MAXLED)
+            if aids == aids2 == aids3:
+                for kakaidskak in range(1,apgiotboard.MAXLED+1):
+                    apgiotboard.led(kakaidskak).on()
+                    sleep(0.2)
             
 
             
