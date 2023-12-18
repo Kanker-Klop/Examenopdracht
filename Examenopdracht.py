@@ -100,3 +100,6 @@ while umoeder == '':
             else:
                 apgiotboard.led(2).on()
                 sleep(1)
+        if apgiotboard.button_pressed(1,True):
+            program5 = "VOLGENDES"
+            program1 = "flak"
