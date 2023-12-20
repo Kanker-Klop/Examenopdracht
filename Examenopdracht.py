@@ -28,11 +28,11 @@ while bestaan == '':
         if vorigeledje != ledje:
             vorigeledje = ledje
             apgiotboard.all_leds_off()
-        Pin(posipinne, Pin.OUT).off()
+        Pin(posipinne, Pin.OUT).on()
         if vorigeposipinne != posipinne:
             vorigeposipinne = posipinne
             for draaien2 in range(14,22):
-                Pin(draaien2, Pin.OUT).on()
+                Pin(draaien2, Pin.OUT).off()
         if apgiotboard.button_pressed(1,True):
             program2 = "VOLGENDES"
             program3 = "AAN"
